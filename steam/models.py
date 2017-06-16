@@ -1,18 +1,14 @@
 from django.db import models
 from django.utils import timezone
 
-class Post(models.Model):
-    author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(
+class Juego(models.Model):
+    nombre = models.CharField(max_length=200)  
+    genero = models.CharField(max_length=200)  
+    fecha_de_lanzamiento = models.DateTimeField(
             default=timezone.now)
-    published_date = models.DateTimeField(
-            blank=True, null=True)
+    distribuidor = models.CharField(max_length=200) 
+    precio = models.CharField(max_length=200) 
+    descripcion= models.TextField()
 
-def publish(self):
-       self.published_date = timezone.now()
-       elf.save()
-
-def __str__(self):
-        return self.title
+    def __str__(self):
+        return self.nombre
