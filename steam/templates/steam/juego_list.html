@@ -15,6 +15,9 @@
             {% for juego in juegos %}
                 <div>
                     <p>{{ juego }}</p>
+            <p>published: {{ juego.published_date }}</p>
+            <h1><a href="">{{ juego.nombre }}</a></h1>
+            <p>{{ juego.descripcion|linebreaksbr }}</p>
                                      
                 </div>
             {% endfor %}
