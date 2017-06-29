@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load static %}
     <html>
         <head>
             <title>X GAME</title>
@@ -17,21 +18,22 @@
             <div>
                 <h1><a href="/">Stim X GAMES</a></h1>
             </div>
-
-            {% for juego in juegos %}
-                <div class="container">
-            <h1>{{ juego.nombre }}</h1>
-            <p>{{ juego.descripcion|linebreaksbr }}</p>
-            <p>published: {{ juego.fecha_de_lanzamiento }}</p>
-            <p>{{ juego.precio }}</p>
-            
-            	<div class="row">
+                <div class="row"> 
+            	   {% for juego in juegos %}
     				<div class="col-sm-4">
-      					<p><strong>{{ juego.nombre }}</strong></p><br>
-      					<img src={% static 'images/maincra.jpg' %}>
-    				</div>
-  					</div>                      
-                </div>
-            {% endfor %}
+      					<p class="text-center"><strong><h1>{{ juego.nombre }}</h1></strong></p><br>
+            			<a href="#demo" data-toggle="collapse">
+        					<img src="static/images/maincra.jpg" class="img-circle person" width="255" height="255">
+      					</a>
+      				<div id="demo" class="collapse">
+        				<p>{{ juego.descripcion|linebreaksbr }}</p>
+            			<p>published: {{ juego.fecha_de_lanzamiento }}</p>
+            			<p>{{ juego.precio }}</p>
+      				</div>
+      				</div>  	
+      				{% endfor %}
+      			</div>	             
         </body>
     </html>
+
+ 
