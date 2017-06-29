@@ -1,27 +1,36 @@
 {% load staticfiles %}
     <html>
         <head>
-            <title>Django Girls blog</title>
+            <title>X GAME</title>
             
             <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+            <meta charset="utf-8">
+  			<meta name="viewport" content="width=device-width, initial-scale=1">
+  			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         </head>
         <body>
             <div>
-                <h1><a href="/">Django Girls Blog</a></h1>
+                <h1><a href="/">Stim X GAMES</a></h1>
             </div>
 
             {% for juego in juegos %}
-                <div>
-
-            
+                <div class="container">
             <h1>{{ juego.nombre }}</h1>
             <p>{{ juego.descripcion|linebreaksbr }}</p>
             <p>published: {{ juego.fecha_de_lanzamiento }}</p>
             <p>{{ juego.precio }}</p>
-                                     
+            
+            	<div class="row">
+    				<div class="col-sm-4">
+      					<p><strong>{{ juego.nombre }}</strong></p><br>
+      					<img src={% static 'images/maincra.jpg' %}>
+    				</div>
+  					</div>                      
                 </div>
             {% endfor %}
         </body>

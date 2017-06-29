@@ -9,7 +9,7 @@ class Juego(models.Model):
     distribuidor = models.CharField(max_length=200) 
     precio = models.CharField(max_length=200) 
     descripcion= models.TextField()
-
+    
     def __str__(self):
         return self.nombre
 
