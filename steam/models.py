@@ -15,7 +15,7 @@ class Juego(models.Model):
 
 class Usuario(models.Model):
     nombre = models.CharField(max_length=200)
-    contraseña = models.CharField(max_length=200)
+    password = models.CharField(max_length=200)
     descripcion_user = models.TextField()
     nacionalidad = models.CharField(max_length=200)
 
