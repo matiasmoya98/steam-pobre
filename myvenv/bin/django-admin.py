@@ -1,4 +1,4 @@
-#!/home/informatica/Escritorio/steam-pobre/myvenv/bin/python3
+#!/home/alumno/Escritorio/steam-pobre/myvenv/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

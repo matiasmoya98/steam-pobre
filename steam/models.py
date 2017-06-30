@@ -9,7 +9,9 @@ class Juego(models.Model):
     distribuidor = models.CharField(max_length=200) 
     precio = models.CharField(max_length=200) 
     descripcion= models.TextField()
-    
+    imagen = models.ImageField(upload_to='static/images',
+                               blank=True,
+                               null=True)   
     def __str__(self):
         return self.nombre
 

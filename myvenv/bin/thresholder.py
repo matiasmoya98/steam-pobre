@@ -1,4 +1,4 @@
-#!/home/informatica/Escritorio/steam-pobre/myvenv/bin/python3
+#!/home/alumno/Escritorio/steam-pobre/myvenv/bin/python3
 #
 # The Python Imaging Library
 # $Id$
