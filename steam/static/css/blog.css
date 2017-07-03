@@ -22,8 +22,8 @@ h1 a{
 .carousel-inner img {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%); /* make all photos black and white */
-    width: 100%; /* Set width to 100% */
-    margin: auto;
+    width: 500%; /* Set width to 100% */
+    margin:0;
 }
 
 .carousel-caption h3 {
@@ -35,6 +35,10 @@ h1 a{
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
 }
+
+.carousel-inner { text-align: center; }
+.carousel .item > img { display: inline-block; }
+
 /* Add a dark background color with a little bit see-through */ 
 .navbar {
     margin-bottom: 0;
@@ -65,8 +69,7 @@ h1 a{
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
-.carousel-inner { text-align: center; }
-.carousel .item > img { display: inline-block; }
+
 /* Dropdown */
 .open .dropdown-toggle {
     color: #fff ;
