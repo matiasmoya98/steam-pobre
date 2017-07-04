@@ -54,7 +54,7 @@ h1 a{
 /* Add a gray color to all navbar links */
 .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
-     margin-left: -50px;
+    
 }
 
 /* On hover, the links will turn white */
