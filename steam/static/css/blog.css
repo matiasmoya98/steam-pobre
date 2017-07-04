@@ -8,6 +8,8 @@ h1 a{
     padding: 80px 120px;
 } 
 
+
+
 .person {
     border: 10px solid transparent;
     margin-bottom: 25px;
@@ -87,3 +89,6 @@ h1 a{
     background-color: red !important;
 }
 
+.w3-panel{
+    margin-bottom: 0px;
+}
