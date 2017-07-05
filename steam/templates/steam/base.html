@@ -23,6 +23,13 @@
               #section3 {padding-top:50px;height:500px;color: #fff;}
               #section4 {padding-top:50px;height:500px;color: #fff;}
             </style>
+
+            <style>
+            .bg-4 { 
+                background-color: #333;
+                color: #ffffff;
+            }
+            </style>
         </head>
         <body body data-spy="scroll" data-target=".navbar" data-offset="50">
             <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -59,6 +66,7 @@
                 </div>  
               </div>
             </nav>
+            
 
         <div id="section1" class="container-fluid">              
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -123,7 +131,7 @@
             {% endblock %}
            <br>     
 
-          <div id="section3" class="w3-panel w3-white w3-round-xlarge" >
+          <footer id="section3" class="container-fluid bg-4" >
               <h3 class="text-center"><i><b>Contact</b></i></h3>       
               <div class="row test" background-color=white>
                 <div class="col-md-4">
@@ -134,7 +142,7 @@
               </div>
               <center>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.356548782497!2d-58.21849330101156!3d-34.771798348599454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c387e9204f6d143!2sColegio+Florentino+Ameghino!5e0!3m2!1ses!2ses!4v1499206566549" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                <ul>
+                  
                   <a href="https://twitter.com/steam_games?lang=es" target="_blank" class="btn btn-social-icon btn-twitter" >
                     <span class="fa fa-twitter"></span>
                   </a>
@@ -144,10 +152,12 @@
                   <a href="https://www.instagram.com/steam_games/" target="_blank" class="btn btn-social-icon btn-instagram" >
                     <span class="fa fa-instagram"></span>
                   </a>
-                </ul>
+
               </center>
-          </div>
-        
+        </footer>
+
+
+
         </body>
     </html>
 
