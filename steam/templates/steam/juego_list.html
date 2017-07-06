@@ -5,12 +5,10 @@
             	      {% for genero in generos %}
     				        <div class="col-sm-4">
       					        <p class="text-center"> 
-                         
-                          <a href="{% url 'cat' pk=genero.pk  %}">{{ genero.nombre }}</a> 
+                          <button type="button" class="btn btn-danger"><a href="{% url 'cat' pk=genero.pk  %}">{{ genero.nombre }}</a></button> 
                         </p>
             			</div>
                     {% endfor %}
-
       			    </div>
 
       {% endblock content %}
