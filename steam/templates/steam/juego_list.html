@@ -1,22 +1,16 @@
 {% extends 'steam/base.html' %}  
-      {% block content %}                
+      {% block content %}   
+             
                 <div class="row text-center"> 
-            	      {% for juego in juegos %}
+            	      {% for genero in generos %}
     				        <div class="col-sm-4">
       					        <p class="text-center"> 
-                          <button type="button" class="btn-lg btn-danger">{{ juego.nombre }}</button>  
+                         
+                          <a href="{% url 'cat' pk=genero.pk  %}">{{ genero.nombre }}</a> 
                         </p>
-            			      <a href="#demo" data-toggle="collapse">
-                          <img src="{{ juego.imagen }}" class="img-circle person" width="255" height="255">
-      					        </a>
-      			          <div id="demo" class="collapse">
-        		   		       <p>{{ juego.descripcion|linebreaksbr }}</p>
-            			       <p>published: {{ juego.fecha_de_lanzamiento }}</p>
-            			       <p>{{ juego.precio }}</p>
-      			          
-                      </div>
-                    </div>
+            			</div>
                     {% endfor %}
 
       			    </div>
+
       {% endblock content %}

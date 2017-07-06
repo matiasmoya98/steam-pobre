@@ -1,9 +1,15 @@
 from django.db import models
 from django.utils import timezone
 
+class Genero(models.Model):
+    nombre = models.CharField(max_length=200)    
+    
+    def __str__(self):
+        return self.nombre
+
 class Juego(models.Model):
     nombre = models.CharField(max_length=200)  
-    genero = models.CharField(max_length=200)  
+    genero = models.ForeignKey('Genero')  
     fecha_de_lanzamiento = models.DateTimeField(
             default=timezone.now)
     distribuidor = models.CharField(max_length=200) 
@@ -25,4 +31,4 @@ class Usuario(models.Model):
         return self.nombre
 
 
-    
+
