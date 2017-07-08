@@ -1,23 +1,25 @@
 {% extends 'steam/base.html' %}  
       {% block content %}   
+      <br><br><br>
                 <div class="row text-center"> 
                     {% for juego in juegos %}
                     <div class="col-sm-4">
                         <p class="text-center"> 
                           <button type="button" class="btn-lg btn-danger">{{ juego.nombre }}</button>  
                         </p>
-                        <a href="#demo" data-toggle="collapse">
+                        <a href="#demo" data-toggle="collapse"> <!-- El error es que en href tiene q decir el nombre del juego xq sino va a repetir siempre la misma descripcion -->
                           <img src="/{{ juego.imagen }}" class="img-circle person" width="255" height="255">
                         </a>
                       <div id="demo" class="collapse">
+                      <br>
+                         <button type="button" class="btn-lg btn-danger">
                          <p>{{ juego.descripcion|linebreaksbr }}</p>
                          <p>published: {{ juego.fecha_de_lanzamiento }}</p>
                          <p>{{ juego.precio }}</p>
+                         </button>
                       </div>
                     </div>
                     {% endfor %}
-
                 </div>
-
 
       {% endblock content %}

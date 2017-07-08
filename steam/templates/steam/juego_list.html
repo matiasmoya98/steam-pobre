@@ -1,14 +1,81 @@
 {% extends 'steam/base.html' %}  
-      {% block content %}   
-             
-                <div class="row text-center"> 
-            	      {% for genero in generos %}
-    				        <div class="col-sm-4">
-      					        <p class="text-center"> 
-                                <a href="{% url 'cat' pk=genero.pk  %}"><button type="button" class="btn btn-danger">{{ genero.nombre }}</button> </a>
-                        </p>
-            			</div>
-                    {% endfor %}
-      			    </div>
+      {% block content %} 
+
+        <div id="section1" class="container-fluid">              
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+  <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="text-center">
+                <img class="img-portada" src="/static/images/photo.jpg" width="700" height="500">
+              </div>
+              <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="text-center">
+                <img src="/static/images/random_detail.jpg" width="700" height="500" >
+              </div>
+              <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="text-center">
+                <img src="/static/images/fondo.jpg" width="700" height="500" >
+              </div>
+              <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        
+
+  <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a><br>
+
+        </div>
+        
+        <div id="section2" class="container-fluid">     
+             <div class="dropdown">
+                <button class="btn-lg btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Categorias
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="row text-center"> 
+            	         {% for genero in generos %}
+    				            <div class="col-sm-4">
+      					            <p class="text-center"> 
+                              <a href="{% url 'cat' pk=genero.pk  %}"><button type="button" class="btn-lg btn-danger">{{ genero.nombre }}</button> </a>
+                            </p>
+            			      </div>
+                       {% endfor %}
+      			        </div>
+                  </li>
+                </ul>
+              </div>
+          </div>
+
 
       {% endblock content %}
