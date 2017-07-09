@@ -1,0 +1,20 @@
+    {% extends 'steam/base.html' %}
+
+    {% block content %}
+         <div id="section2" class="container-fluid"> 
+      <div class="dropdown">
+		   <button class="btn-lg btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Agregar Juego
+                  <span class="caret"></span>
+                  </button>
+		   <ul class="dropdown-menu">
+                  <li>
+        <h1>New Juego</h1>
+        <form method="JUEGO" class="juego-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+        </li>
+        </ul>
+     </div>
+     </div>
+    {% endblock %}
