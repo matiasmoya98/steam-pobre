@@ -13,14 +13,4 @@ def categoria_list(request,pk):
     juegos=Juego.objects.filter(genero=pk)
     return render(request, 'steam/categoria_list.html', {'juegos': juegos})
         
-def Juego_nuevo(request):
-	if request.method == "JUEGO":
-		form = JuegoForm(request.JUEGO)
-		if form.is_valid():
-			juego = form.save(commit=False)
-			juego.save()
-			return redirect('juego_detail', pk=juego.pk)
-	else:
-		form = JuegoForm()
-	return render(request, 'steam/agregar_juego.html', {'form': form})
 

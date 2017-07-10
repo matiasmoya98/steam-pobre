@@ -4,7 +4,6 @@ from . import views
 urlpatterns = [
     url(r'^$', views.juego_list, name='home'),
     url(r'categoria/(?P<pk>[0-9]+)/$', views.categoria_list, name='cat'),
-    url(r'^juego/nuevo/$', views.Juego_nuevo, name='Juego_nuevo'),
 ]
 
 
