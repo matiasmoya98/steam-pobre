@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Genero, Juego
-from .forms import JuegoForm
 from django.shortcuts import redirect
 
 
