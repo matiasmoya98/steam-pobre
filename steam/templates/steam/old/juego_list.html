@@ -68,30 +68,14 @@
       					            <p class="text-center"> 
                               <a href="{% url 'cat' pk=genero.pk  %}"><button type="button" class="btn-lg btn-danger">{{ genero.nombre }}</button> </a>
                             </p>
+                            <label class="collapse" for="{{ genero.pk }}"><img src="/{{ genero.imagen }}" class="img-circle person" width="255" height="255" ></label>
+                         <input id="{{ genero.pk }}" type="checkbox"> 
             			      </div>
                        {% endfor %}
       			        </div>
                   </li>
                 </ul>
               </div>
-
-
-
-                <div class="row text-center"> 
-                    {% for genero in generos %}
-                    <div class="col-sm-4">
-                        <p class="text-center"> 
-                         <a href="{% url 'cat' pk=genero.pk  %}"> <button type="button" class="btn-lg btn-danger">{{ genero.nombre }}</button>  </a>
-                        </p>
-                        <a href="{% url 'cat' pk=genero.pk  %}"><label class="collapse" for="{{ genero.nombre }}"><img src="/{{ genero.imagen }}" class="img-circle person" width="80" height="80" ></label> </a>
-                    </div>
-                    {% endfor %}
-                </div>
-
-
-
-
-
           </div>
          
 

@@ -1,0 +1,30 @@
+{% extends 'steam/base.html' %}  
+      {% block content %}   
+      <br><br><br>
+                <div class="row text-center"> 
+                    {% for juego in juegos %}
+                    <div class="col-sm-4">
+                        <p class="text-center"> 
+                          <button type="button" class="btn-lg btn-danger">{{ juego.nombre }}</button>  
+                        </p>
+                        <label class="collapse" for="{{ juego.nombre }}"><img src="/{{ juego.imagen }}" class="img-circle person" width="255" height="255" ></label>
+                         <input id="{{ juego.nombre }}" type="checkbox"> 
+						          <div> <br>
+                         <button type="button" class="btn-lg btn-danger">
+                            <p>{{ juego.descripcion|linebreaksbr }}</p>
+                            <p>published: {{ juego.fecha_de_lanzamiento }}</p>
+                         </button>
+                         <p class="text-center"><button type="button" class="btn-lg btn-success">{{ juego.precio }}</button></p>
+                      </div> 
+                    </div>
+                    {% endfor %}
+                </div>
+                <br>  
+                <a href="{% url 'home' %}">
+                  <button type="button" class="btn-lg btn-default">
+                    <span class="glyphicon glyphicon-hand-left"></span> Volver
+                  </button>
+                </a>   
+
+
+      {% endblock content %}

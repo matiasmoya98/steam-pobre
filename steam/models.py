@@ -3,7 +3,9 @@ from django.utils import timezone
 
 class Genero(models.Model):
     nombre = models.CharField(max_length=200)    
-    
+    imagen = models.ImageField(upload_to='static/images/genero',
+                               blank=True,
+                               null=True)
     def __str__(self):
         return self.nombre
 
@@ -15,7 +17,7 @@ class Juego(models.Model):
     distribuidor = models.CharField(max_length=200) 
     precio = models.CharField(max_length=200) 
     descripcion= models.TextField()
-    imagen = models.ImageField(upload_to='static/images',
+    imagen = models.ImageField(upload_to='static/images/juego',
                                blank=True,
                                null=True)   
     def __str__(self):
